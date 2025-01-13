@@ -10,7 +10,7 @@ const Freebook = () => {
   useEffect (()=>{
     const getBook = async() => {
       try {
-        const res = await axios.get("http://localhost:4001/book")
+        const res = await axios.get("http://192.168.0.126:4001/book")
         console.log(res.data.filter((data)=>data.category === "free"))
         setBook(res.data.filter((data)=>data.category === "free"))
       } catch (error) {
